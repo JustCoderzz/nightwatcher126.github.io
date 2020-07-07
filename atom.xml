@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nightwatcher126.github.io/"/>
-  <updated>2020-07-07T09:50:43.225Z</updated>
+  <updated>2020-07-07T12:40:26.113Z</updated>
   <id>http://nightwatcher126.github.io/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="http://nightwatcher126.github.io/2020/07/07/%E5%86%85%E9%83%A8%E6%B8%A9%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/"/>
     <id>http://nightwatcher126.github.io/2020/07/07/%E5%86%85%E9%83%A8%E6%B8%A9%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/</id>
     <published>2020-07-07T09:45:30.000Z</published>
-    <updated>2020-07-07T09:50:43.225Z</updated>
+    <updated>2020-07-07T12:40:26.113Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;一．实验概述&quot;&gt;&lt;a href=&quot;#一．实验概述&quot; class=&quot;headerlink&quot; title=&quot;一．实验概述&quot;&gt;&lt;/a&gt;一．实验概述&lt;/h1&gt;&lt;h2 id=&quot;（1）-概述：&quot;&gt;&lt;a href=&quot;#（1）-概述：&quot; class=&quot;headerlink&quot; title=&quot;（1）.概述：&quot;&gt;&lt;/a&gt;（1）.概述：&lt;/h2&gt;&lt;p&gt;内部ADC及温度传感器采集MCU内部电压及温度：&lt;/p&gt;
+      &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;实验概述&quot;&gt;&lt;a href=&quot;#实验概述&quot; class=&quot;headerlink&quot; title=&quot;实验概述&quot;&gt;&lt;/a&gt;实验概述&lt;/h1&gt;&lt;p&gt;@[toc]&lt;/p&gt;
+&lt;h2 id=&quot;一-概述&quot;&gt;&lt;a href=&quot;#一-概述&quot; class=&quot;headerlink&quot; title=&quot;一.概述&quot;&gt;&lt;/a&gt;一.概述&lt;/h2&gt;&lt;p&gt;内部ADC及温度传感器采集MCU内部电压及温度：&lt;/p&gt;
 &lt;p&gt;MCU内部ADC及传感器获取电压及温度值使用数码管或LED点阵或串口等显示获取到的电压及温度值&lt;/p&gt;
-&lt;h2 id=&quot;2-实验平台&quot;&gt;&lt;a href=&quot;#2-实验平台&quot; class=&quot;headerlink&quot; title=&quot;(2).实验平台&quot;&gt;&lt;/a&gt;(2).实验平台&lt;/h2&gt;&lt;h3 id=&quot;（1）硬件平台ALIENTEK-MiniSTM32-开发板&quot;&gt;&lt;a href=&quot;#（1）硬件平台ALIENTEK-MiniSTM32-开发板&quot; class=&quot;headerlink&quot; title=&quot;（1）硬件平台ALIENTEK MiniSTM32 开发板&quot;&gt;&lt;/a&gt;（1）硬件平台ALIENTEK MiniSTM32 开发板&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;file:///C:/Users/80907/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;二-实验平台&quot;&gt;&lt;a href=&quot;#二-实验平台&quot; class=&quot;headerlink&quot; title=&quot;二.实验平台&quot;&gt;&lt;/a&gt;二.实验平台&lt;/h2&gt;&lt;h3 id=&quot;（1）硬件平台ALIENTEK-MiniSTM32-开发板&quot;&gt;&lt;a href=&quot;#（1）硬件平台ALIENTEK-MiniSTM32-开发板&quot; class=&quot;headerlink&quot; title=&quot;（1）硬件平台ALIENTEK MiniSTM32 开发板&quot;&gt;&lt;/a&gt;（1）硬件平台ALIENTEK MiniSTM32 开发板&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200707202826303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/202007072028474.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
     
     </summary>
     
