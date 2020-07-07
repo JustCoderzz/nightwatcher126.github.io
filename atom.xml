@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CHY的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://nightwatcher126.github.io/"/>
+  <updated>2020-07-07T08:25:45.411Z</updated>
+  <id>http://nightwatcher126.github.io/</id>
+  
+  <author>
+    <name>nightwatcher126</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>asp.net发送邮件(超详细）</title>
+    <link href="http://nightwatcher126.github.io/2020/07/07/asp.net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6(%E8%B6%85%E8%AF%A6%E7%BB%86%EF%BC%89/"/>
+    <id>http://nightwatcher126.github.io/2020/07/07/asp.net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6(%E8%B6%85%E8%AF%A6%E7%BB%86%EF%BC%89/</id>
+    <published>2020-07-07T08:25:45.410Z</published>
+    <updated>2020-07-07T08:25:45.411Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;oc]&lt;/p&gt;
+&lt;h3 id=&quot;1-设置qq邮箱smtp服务&quot;&gt;&lt;a href=&quot;#1-设置qq邮箱smtp服务&quot; class=&quot;headerlink&quot; title=&quot;1.设置qq邮箱smtp服务&quot;&gt;&lt;/a&gt;1.设置qq邮箱smtp服务&lt;/h3&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基于asp.net的客户信息反馈系统</title>
+    <link href="http://nightwatcher126.github.io/2020/07/07/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://nightwatcher126.github.io/2020/07/07/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/</id>
+    <published>2020-07-07T00:41:06.000Z</published>
+    <updated>2020-07-07T02:52:54.059Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基于asp-net的客户反馈信息系统&quot;&gt;&lt;a href=&quot;#基于asp-net的客户反馈信息系统&quot; class=&quot;headerlink&quot; title=&quot;基于asp.net的客户反馈信息系统&quot;&gt;&lt;/a&gt;基于asp.net的客户反馈信息系统&lt;/h1&gt;&lt;h1 id=&quot;系统概述&quot;&gt;&lt;a href=&quot;#系统概述&quot; class=&quot;headerlink&quot; title=&quot;系统概述&quot;&gt;&lt;/a&gt;系统概述&lt;/h1&gt;&lt;p&gt;随着互联网的普及，互联网的应用正深入人们生活的方方面面，用户在使用互联网产品时，可能会遇到界面，功能，使用等问题，也希望反馈产品的功能需求和建议，此时，用户希望有渠道可以方便提交反馈和意见，同时能够知道反馈的状态和结果。&lt;br&gt;根据客户信息反馈的特点，可将系统使用者分为客户和公司客服两种，客户可以对公司产品提出反馈，查看反馈状态，查看反馈回复，公司客服可以对反馈进行查看，搜索，回复，人工合并，审核，以及状态修改。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://nightwatcher126.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="-前端 -asp.net" scheme="http://nightwatcher126.github.io/tags/%E5%89%8D%E7%AB%AF-asp-net/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>asp.net发送邮件</title>
+    <link href="http://nightwatcher126.github.io/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/"/>
+    <id>http://nightwatcher126.github.io/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/</id>
+    <published>2020-07-07T00:34:51.000Z</published>
+    <updated>2020-07-07T02:55:01.292Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-设置qq邮箱smtp服务&quot;&gt;&lt;a href=&quot;#1-设置qq邮箱smtp服务&quot; class=&quot;headerlink&quot; title=&quot;1.设置qq邮箱smtp服务&quot;&gt;&lt;/a&gt;1.设置qq邮箱smtp服务&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/2020062721365034.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://nightwatcher126.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="-前端 -asp.net" scheme="http://nightwatcher126.github.io/tags/%E5%89%8D%E7%AB%AF-asp-net/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DS18B20温度传感器实验</title>
+    <link href="http://nightwatcher126.github.io/2020/07/06/DS18B20%E6%B8%A9%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C-1/"/>
+    <id>http://nightwatcher126.github.io/2020/07/06/DS18B20%E6%B8%A9%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C-1/</id>
+    <published>2020-07-06T14:11:19.000Z</published>
+    <updated>2020-07-07T02:55:26.304Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;﻿@[toc]&lt;/p&gt;
+&lt;h3 id=&quot;DS18B20-简介&quot;&gt;&lt;a href=&quot;#DS18B20-简介&quot; class=&quot;headerlink&quot; title=&quot;DS18B20 简介&quot;&gt;&lt;/a&gt;DS18B20 简介&lt;/h3&gt;&lt;p&gt;DS18B20 是由 DALLAS 半导体公司推出的一种的“一线总线”接口的温度传感器。与传&lt;br&gt;统的热敏电阻等测温元件相比，它是一种新型的体积小、适用电压宽、与微处理器接口简单的&lt;br&gt;数字化温度传感器。一线总线结构具有简洁且经济的特点，可使用户轻松地组建传感器网络，&lt;br&gt;从而为测量系统的构建引入全新概念，测量温度范围为-55&lt;del&gt;+125℃ ，精度为±0.5℃。现场温&lt;br&gt;度直接以“一线总线”的数字方式传输，大大提高了系统的抗干扰性。它能直接读出被测温度，&lt;br&gt;并且可根据实际要求通过简单的编程实现 9&lt;/del&gt;l2 位的数字值读数方式。它工作在 3~5.5 V 的电压&lt;br&gt;范围，采用多种封装形式，从而使系统设计灵活、方便，设定分辨率及用户设定的报警温度存&lt;br&gt;储在 EEPROM 中，掉电后依然保存。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200630111630896.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://nightwatcher126.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+      <category term="-硬件 -stm32" scheme="http://nightwatcher126.github.io/tags/%E7%A1%AC%E4%BB%B6-stm32/"/>
+    
+  </entry>
+  
+</feed>
