@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nightwatcher126.github.io/2020/07/07/asp.net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6(%E8%B6%85%E8%AF%A6%E7%BB%86%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="http://nightwatcher126.github.io/2020/07/07/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nightwatcher126">
@@ -319,7 +319,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/07/asp.net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6(%E8%B6%85%E8%AF%A6%E7%BB%86%EF%BC%89/" itemprop="url">asp.net发送邮件(超详细）</a></h1>
+                <a class="post-title-link" href="/2020/07/07/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/" itemprop="url">基于asp.net的客户信息反馈系统</a></h1>
         
 
         <div class="post-meta">
@@ -331,166 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-07T08:21:27+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-07T08:41:06+08:00">
                 2020-07-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  587
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>oc]</p>
-<h3 id="1-设置qq邮箱smtp服务"><a href="#1-设置qq邮箱smtp服务" class="headerlink" title="1.设置qq邮箱smtp服务"></a>1.设置qq邮箱smtp服务</h3><p><img src="https://img-blog.csdnimg.cn/2020062721365034.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="2-发送邮件代码"><a href="#2-发送邮件代码" class="headerlink" title="2.发送邮件代码"></a>2.发送邮件代码</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Configuration;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">EmailSender</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//从Web.config中的&lt;appSettings&gt;配置节获取相应的键值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> mailFromAddress = ConfigurationManager.AppSettings[<span class="string">"MailFromAddress"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> useSsl = <span class="keyword">bool</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"UseSsl"</span>]);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> userName = ConfigurationManager.AppSettings[<span class="string">"UserName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> password = ConfigurationManager.AppSettings[<span class="string">"Password"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> serverName = ConfigurationManager.AppSettings[<span class="string">"ServerName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> serverPort = <span class="keyword">int</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"ServerPort"</span>]);</span><br><span class="line">                                        </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 自定义方法，根据设置的SMTP服务器名、端口号、账户名、授权码等信息发送给定发件人邮箱、收件人邮箱、电子邮件主题、电子邮件内容等信息的邮件</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PsdSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress, <span class="keyword">string</span> newPwd</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"您登录的密码已重置为："</span> + newPwd;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"用户密码重置"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">                                           <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//验证码发送</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">VerificationCodeSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//伪随机生成6位数字验证码</span></span><br><span class="line">        Random rand = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">string</span> code = rand.Next(<span class="number">100000</span>, <span class="number">999999</span>).ToString();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"你的验证码为："</span> + code+<span class="string">" ，用于进行密码重置验证，请勿转发！"</span>;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"BookShop验证码"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">            <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3设置web-config"><a href="#3设置web-config" class="headerlink" title="3设置web.config"></a>3设置web.config</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"MailFromAddress"</span> <span class="attr">value</span>=<span class="string">"qq号@qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"UseSsl"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Username"</span> <span class="attr">value</span>=<span class="string">"随意"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Password"</span> <span class="attr">value</span>=<span class="string">"验证码(从设置smtp中获得)"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerName"</span> <span class="attr">value</span>=<span class="string">"smtp.qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerPort"</span> <span class="attr">value</span>=<span class="string">"587"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20200627214445767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入邮箱获取修改后的密码。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-<div>
-  
-</div>
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nightwatcher126.github.io/2020/07/06/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nightwatcher126">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHY的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/06/%E5%9F%BA%E4%BA%8Easp-net%E7%9A%84%E5%AE%A2%E6%88%B7%E5%8F%8D%E9%A6%88%E7%B3%BB%E7%BB%9F/" itemprop="url">基于asp.net的客户反馈系统</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-06T22:49:16+08:00">
-                2020-07-06
               </time>
             
 
@@ -602,6 +444,187 @@
 <h3 id="6-评论管理"><a href="#6-评论管理" class="headerlink" title="6.评论管理"></a>6.评论管理</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">asp:Content</span> <span class="attr">ID</span>=<span class="string">"Content1"</span> <span class="attr">ContentPlaceHolderID</span>=<span class="string">"head"</span> <span class="attr">Runat</span>=<span class="string">"Server"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">asp:Content</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">asp:Content</span> <span class="attr">ID</span>=<span class="string">"Content2"</span> <span class="attr">ContentPlaceHolderID</span>=<span class="string">"ContentPlaceHolder1"</span> <span class="attr">Runat</span>=<span class="string">"Server"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-card"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-card-header"</span> <span class="attr">style</span>=<span class="string">"text-align: center; font-size: large;"</span>&gt;</span>反馈管理<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-card"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-card-header layui-form"</span> <span class="attr">style</span>=<span class="string">"padding: 15px 10px;"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-row"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-col-lg1"</span> <span class="attr">style</span>=<span class="string">"line-height: initial;padding-left:10px;"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"CommentManage.aspx"</span> <span class="attr">class</span>=<span class="string">"layui-btn"</span>&gt;</span>显示全部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-col-lg2 layui-col-lg-offset5"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">asp:DropDownList</span> <span class="attr">ID</span>=<span class="string">"ddlSearchType"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">Width</span>=<span class="string">"100px"</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">asp:ListItem</span> <span class="attr">Value</span>=<span class="string">""</span>&gt;</span>选择反馈方式<span class="tag">&lt;/<span class="name">asp:ListItem</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">asp:ListItem</span> <span class="attr">Value</span>=<span class="string">"Context"</span>&gt;</span>反馈内容<span class="tag">&lt;/<span class="name">asp:ListItem</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">asp:ListItem</span> <span class="attr">Value</span>=<span class="string">"UserName"</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">asp:ListItem</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">asp:ListItem</span> <span class="attr">Value</span>=<span class="string">"BookId"</span>&gt;</span>产品ID<span class="tag">&lt;/<span class="name">asp:ListItem</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">asp:DropDownList</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-col-lg2"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">asp:TextBox</span> <span class="attr">ID</span>=<span class="string">"txtSearchKey"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">CssClass</span>=<span class="string">"layui-input"</span> <span class="attr">placeholder</span>=<span class="string">"搜索评论"</span>&gt;</span><span class="tag">&lt;/<span class="name">asp:TextBox</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-col-lg1"</span> <span class="attr">style</span>=<span class="string">"line-height: initial;margin-left:10px;"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">asp:LinkButton</span> <span class="attr">ID</span>=<span class="string">"BtnSearch"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">CssClass</span>=<span class="string">"layui-btn"</span> <span class="attr">OnClick</span>=<span class="string">"BtnSearch_Click"</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">asp:LinkButton</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layui-card-body layui-form"</span> <span class="attr">font-size:</span> <span class="attr">large</span>;"&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">asp:Label</span> <span class="attr">ID</span>=<span class="string">"lblMsg"</span> <span class="attr">runat</span>=<span class="string">"server"</span>&gt;</span><span class="tag">&lt;/<span class="name">asp:Label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">asp:GridView</span> <span class="attr">ID</span>=<span class="string">"gvComment"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">CssClass</span>=<span class="string">"layui-table"</span> <span class="attr">style</span>=<span class="string">"table-layout: fixed;"</span> <span class="attr">AutoGenerateColumns</span>=<span class="string">"False"</span> <span class="attr">AllowPaging</span>=<span class="string">"True"</span> <span class="attr">DataKeyNames</span>=<span class="string">"CommentId"</span> <span class="attr">OnRowDeleting</span>=<span class="string">"gvComment_RowDeleting"</span> <span class="attr">OnPageIndexChanging</span>=<span class="string">"gvComment_PageIndexChanging"</span> <span class="attr">OnRowDataBound</span>=<span class="string">"gvComment_RowDataBound"</span> <span class="attr">OnSelectedIndexChanged</span>=<span class="string">"gvComment_SelectedIndexChanged"</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">Columns</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:BoundField</span> <span class="attr">DataField</span>=<span class="string">"CommentId"</span> <span class="attr">HeaderText</span>=<span class="string">"评论ID"</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"60px"</span> /&gt;</span></span><br><span class="line">                     <span class="tag">&lt;/<span class="name">asp:BoundField</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:BoundField</span> <span class="attr">DataField</span>=<span class="string">"ProductId"</span> <span class="attr">HeaderText</span>=<span class="string">"产品ID"</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"60px"</span> /&gt;</span></span><br><span class="line">                     <span class="tag">&lt;/<span class="name">asp:BoundField</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:BoundField</span> <span class="attr">DataField</span>=<span class="string">"UserName"</span> <span class="attr">HeaderText</span>=<span class="string">"用户名"</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"100px"</span> /&gt;</span></span><br><span class="line">                     <span class="tag">&lt;/<span class="name">asp:BoundField</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:BoundField</span> <span class="attr">DataField</span>=<span class="string">"TextContent"</span> <span class="attr">HeaderText</span>=<span class="string">"反馈内容"</span>/&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:BoundField</span> <span class="attr">DataField</span>=<span class="string">"ComDateTime"</span> <span class="attr">HeaderText</span>=<span class="string">"反馈时间"</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"125px"</span> /&gt;</span></span><br><span class="line">                     <span class="tag">&lt;/<span class="name">asp:BoundField</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">asp:CommandField</span> <span class="attr">ShowDeleteButton</span>=<span class="string">"True"</span> &gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"60px"</span> /&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">ItemStyle</span> <span class="attr">ForeColor</span>=<span class="string">"#3399FF"</span> <span class="attr">Font-Underline</span>=<span class="string">"True"</span> /&gt;</span></span><br><span class="line">                     <span class="tag">&lt;/<span class="name">asp:CommandField</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">asp:HyperLinkField</span> <span class="attr">Text</span>=<span class="string">"回复"</span> <span class="attr">DataNavigateUrlFields</span>=<span class="string">"ProductId"</span> <span class="attr">DataNavigateUrlFormatString</span>=<span class="string">"~/ProDetails.aspx?Book_Id=&#123;0&#125;"</span> <span class="attr">ItemStyle-ForeColor</span>=<span class="string">"#3399FF"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">Width</span>=<span class="string">"30px"</span> /&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">ItemStyle</span> <span class="attr">ForeColor</span>=<span class="string">"#3399FF"</span> <span class="attr">Font-Underline</span>=<span class="string">"True"</span>&gt;</span><span class="tag">&lt;/<span class="name">ItemStyle</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">asp:HyperLinkField</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;/<span class="name">Columns</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">HeaderStyle</span> <span class="attr">BackColor</span>=<span class="string">"Silver"</span> /&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">PagerStyle</span> <span class="attr">HorizontalAlign</span>=<span class="string">"Center"</span> /&gt;</span></span><br><span class="line">             <span class="tag">&lt;/<span class="name">asp:GridView</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">asp:Content</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://img-blog.csdnimg.cn/20200706230657559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200706230709863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+<div>
+  
+</div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nightwatcher126.github.io/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nightwatcher126">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHY的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/" itemprop="url">asp.net发送邮件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-07T08:34:51+08:00">
+                2020-07-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  586
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-设置qq邮箱smtp服务"><a href="#1-设置qq邮箱smtp服务" class="headerlink" title="1.设置qq邮箱smtp服务"></a>1.设置qq邮箱smtp服务</h3><p><img src="https://img-blog.csdnimg.cn/2020062721365034.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="2-发送邮件代码"><a href="#2-发送邮件代码" class="headerlink" title="2.发送邮件代码"></a>2.发送邮件代码</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Configuration;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">EmailSender</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//从Web.config中的&lt;appSettings&gt;配置节获取相应的键值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> mailFromAddress = ConfigurationManager.AppSettings[<span class="string">"MailFromAddress"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> useSsl = <span class="keyword">bool</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"UseSsl"</span>]);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> userName = ConfigurationManager.AppSettings[<span class="string">"UserName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> password = ConfigurationManager.AppSettings[<span class="string">"Password"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> serverName = ConfigurationManager.AppSettings[<span class="string">"ServerName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> serverPort = <span class="keyword">int</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"ServerPort"</span>]);</span><br><span class="line">                                        </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 自定义方法，根据设置的SMTP服务器名、端口号、账户名、授权码等信息发送给定发件人邮箱、收件人邮箱、电子邮件主题、电子邮件内容等信息的邮件</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PsdSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress, <span class="keyword">string</span> newPwd</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"您登录的密码已重置为："</span> + newPwd;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"用户密码重置"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">                                           <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//验证码发送</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">VerificationCodeSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//伪随机生成6位数字验证码</span></span><br><span class="line">        Random rand = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">string</span> code = rand.Next(<span class="number">100000</span>, <span class="number">999999</span>).ToString();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"你的验证码为："</span> + code+<span class="string">" ，用于进行密码重置验证，请勿转发！"</span>;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"BookShop验证码"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">            <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3设置web-config"><a href="#3设置web-config" class="headerlink" title="3设置web.config"></a>3设置web.config</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"MailFromAddress"</span> <span class="attr">value</span>=<span class="string">"qq号@qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"UseSsl"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Username"</span> <span class="attr">value</span>=<span class="string">"随意"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Password"</span> <span class="attr">value</span>=<span class="string">"验证码(从设置smtp中获得)"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerName"</span> <span class="attr">value</span>=<span class="string">"smtp.qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerPort"</span> <span class="attr">value</span>=<span class="string">"587"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200627214445767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入邮箱获取修改后的密码。</p>
 
           
         
@@ -822,188 +845,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nightwatcher126.github.io/2020/07/06/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nightwatcher126">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHY的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/06/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/" itemprop="url">asp.net发送邮件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-06T22:08:12+08:00">
-                2020-07-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  587
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>@[toc]</p>
-<h3 id="1-设置qq邮箱smtp服务"><a href="#1-设置qq邮箱smtp服务" class="headerlink" title="1.设置qq邮箱smtp服务"></a>1.设置qq邮箱smtp服务</h3><p><img src="https://img-blog.csdnimg.cn/2020062721365034.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="2-发送邮件代码"><a href="#2-发送邮件代码" class="headerlink" title="2.发送邮件代码"></a>2.发送邮件代码</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Configuration;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Mail;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">EmailSender</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//从Web.config中的&lt;appSettings&gt;配置节获取相应的键值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> mailFromAddress = ConfigurationManager.AppSettings[<span class="string">"MailFromAddress"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">bool</span> useSsl = <span class="keyword">bool</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"UseSsl"</span>]);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> userName = ConfigurationManager.AppSettings[<span class="string">"UserName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> password = ConfigurationManager.AppSettings[<span class="string">"Password"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> serverName = ConfigurationManager.AppSettings[<span class="string">"ServerName"</span>];</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> serverPort = <span class="keyword">int</span>.Parse(ConfigurationManager.AppSettings[<span class="string">"ServerPort"</span>]);</span><br><span class="line">                                        </span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 自定义方法，根据设置的SMTP服务器名、端口号、账户名、授权码等信息发送给定发件人邮箱、收件人邮箱、电子邮件主题、电子邮件内容等信息的邮件</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PsdSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress, <span class="keyword">string</span> newPwd</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"您登录的密码已重置为："</span> + newPwd;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"用户密码重置"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">                                           <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//验证码发送</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">string</span> <span class="title">VerificationCodeSend</span>(<span class="params"><span class="keyword">string</span> mailToAddress</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//伪随机生成6位数字验证码</span></span><br><span class="line">        Random rand = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">string</span> code = rand.Next(<span class="number">100000</span>, <span class="number">999999</span>).ToString();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象</span></span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> smtpClient = <span class="keyword">new</span> SmtpClient())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//设置是否使用SSL协议连接</span></span><br><span class="line">            smtpClient.EnableSsl = useSsl;</span><br><span class="line">            <span class="comment">//设置SMTP服务器名</span></span><br><span class="line">            smtpClient.Host = serverName;</span><br><span class="line">            <span class="comment">//设置SMTP服务器的端口号</span></span><br><span class="line">            smtpClient.Port = serverPort;</span><br><span class="line">            <span class="comment">//设置SMTP服务器发送邮件的凭据（用户名和授权码)</span></span><br><span class="line">            smtpClient.Credentials = <span class="keyword">new</span> NetworkCredential(userName, password);</span><br><span class="line">            <span class="keyword">string</span> body = <span class="string">"你的验证码为："</span> + code+<span class="string">" ，用于进行密码重置验证，请勿转发！"</span>;</span><br><span class="line">            MailMessage mailMessage = <span class="keyword">new</span> MailMessage(</span><br><span class="line">                                   mailFromAddress,   <span class="comment">// 发件人邮箱</span></span><br><span class="line">                                   mailToAddress,     <span class="comment">// 收件人邮箱</span></span><br><span class="line">                                   <span class="string">"BookShop验证码"</span>,  <span class="comment">// 电子邮件主题</span></span><br><span class="line">                                   body);  <span class="comment">// 电子邮件内容</span></span><br><span class="line">            <span class="comment">//调用smtpClient对象的Send()方法发送邮件</span></span><br><span class="line">            smtpClient.Send(mailMessage);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3设置web-config"><a href="#3设置web-config" class="headerlink" title="3设置web.config"></a>3设置web.config</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"MailFromAddress"</span> <span class="attr">value</span>=<span class="string">"qq号@qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"UseSsl"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Username"</span> <span class="attr">value</span>=<span class="string">"随意"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"Password"</span> <span class="attr">value</span>=<span class="string">"验证码(从设置smtp中获得)"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerName"</span> <span class="attr">value</span>=<span class="string">"smtp.qq.com"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"ServerPort"</span> <span class="attr">value</span>=<span class="string">"587"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200627214445767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTg3MzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入邮箱获取修改后的密码。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-<div>
-  
-</div>
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1054,7 +895,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1144,7 +985,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">5.8k</span>
   
 </div>
 
