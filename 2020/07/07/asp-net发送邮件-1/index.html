@@ -372,6 +372,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -459,6 +469,24 @@
   
 </div>
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    nightwatcher126
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://nightwatcher126.github.io/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/" title="asp.net发送邮件">http://nightwatcher126.github.io/2020/07/07/asp-net%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6-1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -518,6 +546,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -866,6 +897,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'SLdfYlVJc32iAMioN5ubWRCV-gzGzoHsz',
+        appKey: '2AuLqzk6nd7qINKngnJXemhP',
+        placeholder: '请指出不足，共同进步。',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
