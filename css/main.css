@@ -2001,7 +2001,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0f93be;
+  background: #f7a1c8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3424,7 +3424,7 @@ img:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: 100% auto;
   }
   #footer a {
     color: #eee;
