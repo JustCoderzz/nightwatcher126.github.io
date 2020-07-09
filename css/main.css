@@ -2001,7 +2001,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d68238;
+  background: #d4ff21;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3420,11 +3420,19 @@ img:hover {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("https://i.loli.net/2020/07/09/sucakZSlV6feBC1.jpg");
+    background: url("https://i.loli.net/2020/07/09/sucakZSlV6feBC1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+/*这是设置底部文字, 看个人需要修改*/
+  }
+  body #footer > stay hungry > div {
+    color: #eee;
   }
   #footer a {
     color: #eee;
