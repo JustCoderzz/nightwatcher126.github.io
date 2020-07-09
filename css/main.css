@@ -2000,7 +2000,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff14;
+  background: #4036ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2959,7 +2959,7 @@ embed {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background.png");
+    background-image: url("https://i.loli.net/2020/07/09/sucakZSlV6feBC1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
