@@ -2001,7 +2001,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #267aff;
+  background: #d68238;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3463,6 +3463,67 @@ img:hover {
 }
 .with-love {
   color: #ff71a8;
+}
+.eye {
+  position: fixed;
+  bottom: 68px;
+  height: 66px;
+  font-size: 12px;
+  line-height: 33px;
+  text-align: center;
+  z-index: 99;
+}
+.eye1 {
+  float: left;
+  display: none;
+  height: 50px;
+}
+.eye1 ul {
+  height: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.eye1 ul li {
+  float: left;
+  width: 23px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+}
+.eye1 ul li:hover {
+  border-bottom: 0 !important;
+  background-color: #fff;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.eye2 {
+  float: left;
+  width: 18px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #e6e6e6;
+}
+.eye2:hover {
+  border-bottom: 0 !important;
+  background-color: #eee;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
