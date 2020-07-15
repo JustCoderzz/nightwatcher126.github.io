@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nightwatcher126.github.io/"/>
-  <updated>2020-07-15T08:24:15.540Z</updated>
+  <updated>2020-07-15T12:11:39.478Z</updated>
   <id>http://nightwatcher126.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>stm32数字钟实验</title>
+    <link href="http://nightwatcher126.github.io/posts/302.html"/>
+    <id>http://nightwatcher126.github.io/posts/302.html</id>
+    <published>2020-07-15T11:57:59.000Z</published>
+    <updated>2020-07-15T12:11:39.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目及要求&quot;&gt;&lt;a href=&quot;#题目及要求&quot; class=&quot;headerlink&quot; title=&quot;题目及要求&quot;&gt;&lt;/a&gt;题目及要求&lt;/h2&gt;&lt;p&gt; 1.数字钟。&lt;br&gt;使用ARM Cotex M3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://nightwatcher126.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
+    
+    
+      <category term="-stm32" scheme="http://nightwatcher126.github.io/tags/stm32/"/>
+    
+  </entry>
   
   <entry>
     <title>c#实现网络抓包及协议分析</title>
