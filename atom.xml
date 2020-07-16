@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nightwatcher126.github.io/"/>
-  <updated>2020-07-15T12:11:39.478Z</updated>
+  <updated>2020-07-16T09:23:39.721Z</updated>
   <id>http://nightwatcher126.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>初识html</title>
+    <link href="http://nightwatcher126.github.io/posts/64851.html"/>
+    <id>http://nightwatcher126.github.io/posts/64851.html</id>
+    <published>2020-07-16T09:22:50.000Z</published>
+    <updated>2020-07-16T09:23:39.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-初识HTML&quot;&gt;&lt;a href=&quot;#1-初识HTML&quot; class=&quot;headerlink&quot; title=&quot;1.初识HTML&quot;&gt;&lt;/a&gt;1.初识HTML&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;HTML 指的是超文本标记语言 (Hyper Text Markup
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://nightwatcher126.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="-html" scheme="http://nightwatcher126.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
     <title>stm32数字钟实验</title>
     <link href="http://nightwatcher126.github.io/posts/302.html"/>
     <id>http://nightwatcher126.github.io/posts/302.html</id>
     <published>2020-07-15T11:57:59.000Z</published>
-    <updated>2020-07-15T12:11:39.478Z</updated>
+    <updated>2020-07-15T12:12:37.590Z</updated>
     
     <summary type="html">
     
@@ -36,7 +64,7 @@
     </summary>
     
     
-      <category term="硬件" scheme="http://nightwatcher126.github.io/categories/%E7%A1%AC%E4%BB%B6/"/>
+      <category term="uncategorized" scheme="http://nightwatcher126.github.io/categories/uncategorized/"/>
     
     
       <category term="-stm32" scheme="http://nightwatcher126.github.io/tags/stm32/"/>
