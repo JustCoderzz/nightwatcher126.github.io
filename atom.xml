@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nightwatcher126.github.io/"/>
-  <updated>2020-07-16T14:27:56.239Z</updated>
+  <updated>2020-07-17T15:23:22.592Z</updated>
   <id>http://nightwatcher126.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML2</title>
+    <link href="http://nightwatcher126.github.io/posts/15573.html"/>
+    <id>http://nightwatcher126.github.io/posts/15573.html</id>
+    <published>2020-07-17T15:12:41.000Z</published>
+    <updated>2020-07-17T15:23:22.592Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;HTML归纳总结第二天&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://nightwatcher126.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="-前端" scheme="http://nightwatcher126.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>初识HTML</title>
