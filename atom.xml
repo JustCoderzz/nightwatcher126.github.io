@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nightwatcher126.github.io/"/>
-  <updated>2020-07-19T01:32:10.548Z</updated>
+  <updated>2020-07-19T01:39:39.402Z</updated>
   <id>http://nightwatcher126.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>‘测试’</title>
+    <link href="http://nightwatcher126.github.io/posts/11176.html"/>
+    <id>http://nightwatcher126.github.io/posts/11176.html</id>
+    <published>2020-07-19T01:39:39.000Z</published>
+    <updated>2020-07-19T01:39:39.402Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>HTML2</title>
