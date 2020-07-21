@@ -1,232 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>DS18B20温度传感器实验</title>
-    <url>/posts/41913.html</url>
-    <content><![CDATA[<p>﻿@[toc]</p>
-<h3 id="DS18B20-简介"><a href="#DS18B20-简介" class="headerlink" title="DS18B20 简介"></a>DS18B20 简介</h3><p>DS18B20 是由 DALLAS 半导体公司推出的一种的“一线总线”接口的温度传感器。与传<br>统的热敏电阻等测温元件相比，它是一种新型的体积小、适用电压宽、与微处理器接口简单的<br>数字化温度传感器。一线总线结构具有简洁且经济的特点，可使用户轻松地组建传感器网络，<br>从而为测量系统的构建引入全新概念，测量温度范围为-55<del>+125℃ ，精度为±0.5℃。现场温<br>度直接以“一线总线”的数字方式传输，大大提高了系统的抗干扰性。它能直接读出被测温度，<br>并且可根据实际要求通过简单的编程实现 9</del>l2 位的数字值读数方式。它工作在 3~5.5 V 的电压<br>范围，采用多种封装形式，从而使系统设计灵活、方便，设定分辨率及用户设定的报警温度存<br>储在 EEPROM 中，掉电后依然保存。</p>
-<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://i.loli.net/2020/07/18/zGNmbeJ2SXWtIkn.png" alt="在这里插入图片描述"></p>
-<a id="more"></a>
-
-<h3 id="硬件设计"><a href="#硬件设计" class="headerlink" title="硬件设计"></a>硬件设计</h3><p>由于开发板上标准配置是没有 DS18B20 这个传感器的，只有接口，所以要做本章的实验，<br>大家必须找一个 DS18B20 插在预留的 18B20 接口上。<br>本章实验功能简介：开机的时候先检测是否有 DS18B20 存在，如果没有，则提示错误。<br>只有在检测到 DS18B20 之后才开始读取温度并显示在 LCD 上，如果发现了 DS18B20，则程<br>序每隔 100ms 左右读取一次数据，并把温度显示在 LCD 上。同样我们也是用 DS0 来指示程序<br>正在运行。<br>所要用到的硬件资源如下：<br>1） 指示灯 DS0<br>2） TFTLCD 模块<br>3） DS18B20 温度传感器<br><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://i.loli.net/2020/07/18/dgj5BpI7GvFWVCy.png" alt="在这里插入图片描述"></p>
-<h3 id="软件设计"><a href="#软件设计" class="headerlink" title="软件设计"></a>软件设计</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"ds18b20.h"</span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"delay.h"</span></span>
-<span class="token comment" spellcheck="true">//复位 DS18B20</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span> 
-<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 OUTPUT</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//拉低 DQ</span>
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">750</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//拉低 750us</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//DQ=1 </span>
-<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//15US</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//等待 DS18B20 的回应</span>
-<span class="token comment" spellcheck="true">//返回 1:未检测到 DS18B20 的存在</span>
-<span class="token comment" spellcheck="true">//返回 0:存在</span>
-u8 <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span> 
-u8 retry<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token function">DS18B20_IO_IN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//SET PA0 INPUT</span>
- <span class="token keyword">while</span> <span class="token punctuation">(</span>DS18B20_DQ_IN<span class="token operator">&amp;&amp;</span>retry<span class="token operator">&lt;</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> retry<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>retry<span class="token operator">>=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">else</span> retry<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
- <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>DS18B20_DQ_IN<span class="token operator">&amp;&amp;</span>retry<span class="token operator">&lt;</span><span class="token number">240</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> retry<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>retry<span class="token operator">>=</span><span class="token number">240</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
-<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-ALIENTEK MiniSTM32 V3<span class="token number">.0</span> 开发板教程
-<span class="token number">381</span>
-STM32 不完全手册（库函数版）
-<span class="token comment" spellcheck="true">//从 DS18B20 读取一个位</span>
-<span class="token comment" spellcheck="true">//返回值：1/0</span>
-u8 <span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span>
- u8 data<span class="token punctuation">;</span>
-<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 OUTPUT</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> 
-<span class="token function">DS18B20_IO_IN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 INPUT</span>
-<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>DS18B20_DQ_IN<span class="token punctuation">)</span>data<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
- <span class="token keyword">else</span> data<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
- <span class="token keyword">return</span> data<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//从 DS18B20 读取一个字节</span>
-<span class="token comment" spellcheck="true">//返回值：读到的数据</span>
-u8 <span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span> 
- u8 i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>dat<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span>
- j<span class="token operator">=</span><span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- dat<span class="token operator">=</span><span class="token punctuation">(</span>j<span class="token operator">&lt;&lt;</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token operator">|</span><span class="token punctuation">(</span>dat<span class="token operator">>></span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span> 
- <span class="token keyword">return</span> dat<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//写一个字节到 DS18B20</span>
-<span class="token comment" spellcheck="true">//dat：要写入的字节</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span>u8 dat<span class="token punctuation">)</span> 
-<span class="token punctuation">{</span> 
- u8 j<span class="token punctuation">;</span> u8 testb<span class="token punctuation">;</span>
-<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//SET PA0 OUTPUT;</span>
- <span class="token keyword">for</span> <span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> 
-<span class="token punctuation">{</span>
- testb<span class="token operator">=</span>dat<span class="token operator">&amp;</span><span class="token number">0x01</span><span class="token punctuation">;</span>
- dat<span class="token operator">=</span>dat<span class="token operator">>></span><span class="token number">1</span><span class="token punctuation">;</span>
- <span class="token keyword">if</span> <span class="token punctuation">(</span>testb<span class="token punctuation">)</span> 
- <span class="token punctuation">{</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Write 1</span>
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-ALIENTEK MiniSTM32 V3<span class="token number">.0</span> 开发板教程
-<span class="token number">382</span>
-STM32 不完全手册（库函数版）
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
- <span class="token punctuation">}</span>
- <span class="token keyword">else</span> 
- <span class="token punctuation">{</span>
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Write 0</span>
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
- DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
- <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
- <span class="token punctuation">}</span>
- <span class="token punctuation">}</span> <span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//开始温度转换</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Start</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// ds1820 start convert</span>
-<span class="token punctuation">{</span> 
- <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xcc</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// skip rom</span>
- <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0x44</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// convert</span>
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">//初始化 DS18B20 的 IO 口 DQ 同时检测 DS 的存在</span>
-<span class="token comment" spellcheck="true">//返回 1:不存在</span>
-<span class="token comment" spellcheck="true">//返回 0:存在 </span>
-u8 <span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-GPIO_InitTypeDef GPIO_InitStructure<span class="token punctuation">;</span>
-<span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span>RCC_APB2Periph_GPIOA<span class="token punctuation">,</span> ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//使能 PORTA 时钟</span>
-GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Pin <span class="token operator">=</span> GPIO_Pin_0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//PORTA0 推挽输出</span>
-GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Mode <span class="token operator">=</span> GPIO_Mode_Out_PP<span class="token punctuation">;</span> 
-GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Speed <span class="token operator">=</span> GPIO_Speed_50MHz<span class="token punctuation">;</span>
-<span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span> <span class="token operator">&amp;</span>GPIO_InitStructure<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">GPIO_SetBits</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span>GPIO_Pin_0<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出 1</span>
-<span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">return</span> <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//从 ds18b20 得到温度值</span>
-<span class="token comment" spellcheck="true">//精度：0.1C</span>
-<span class="token comment" spellcheck="true">//返回值：温度值 （-550~1250）</span>
-<span class="token keyword">short</span> <span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
- u8 temp<span class="token punctuation">;</span> u8 TL<span class="token punctuation">,</span>TH<span class="token punctuation">;</span>
-<span class="token keyword">short</span> tem<span class="token punctuation">;</span>
- <span class="token function">DS18B20_Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ds1820 start convert</span>
- <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xcc</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// skip rom</span>
- <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xbe</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// convert </span>
- TL<span class="token operator">=</span><span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// LSB </span>
- TH<span class="token operator">=</span><span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// MSB </span>
- <span class="token keyword">if</span><span class="token punctuation">(</span>TH<span class="token operator">></span><span class="token number">7</span><span class="token punctuation">)</span>
- <span class="token punctuation">{</span>
- TH<span class="token operator">=</span><span class="token operator">~</span>TH<span class="token punctuation">;</span> TL<span class="token operator">=</span><span class="token operator">~</span>TL<span class="token punctuation">;</span>
- temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//温度为负 </span>
- <span class="token punctuation">}</span><span class="token keyword">else</span> temp<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//温度为正 </span>
- tem<span class="token operator">=</span>TH<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获得高八位</span>
- tem<span class="token operator">&lt;&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span> 
- tem<span class="token operator">+</span><span class="token operator">=</span>TL<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获得底八位</span>
- tem<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>tem<span class="token operator">*</span><span class="token number">0.625</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换 </span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token keyword">return</span> tem<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回温度值</span>
-<span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token operator">-</span>tem<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">ifndef</span> __DS18B20_H</span>
-<span class="token macro property">#<span class="token directive keyword">define</span> __DS18B20_H </span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"sys.h"</span> </span>
-<span class="token comment" spellcheck="true">//IO 方向设置</span>
-<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_IO_IN() {GPIOA->CRL&amp;=0XFFFFFFF0;GPIOA->CRL|=8&lt;&lt;0;}</span>
-<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_IO_OUT() {GPIOA->CRL&amp;=0XFFFFFFF0;GPIOA->CRL|=3&lt;&lt;0;}</span>
-<span class="token comment" spellcheck="true">////IO 操作函数 </span>
-<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_DQ_OUT PAout(0) </span><span class="token comment" spellcheck="true">//数据端口 PA0</span>
-<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_DQ_IN PAin(0) </span><span class="token comment" spellcheck="true">//数据端口 PA0 </span>
-u8 <span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//初始化 DS18B20</span>
-<span class="token keyword">short</span> <span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取温度</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Start</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//开始温度转换</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span>u8 dat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//写入一个字节</span>
-u8 <span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读出一个字节</span>
-u8 <span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读出一个位</span>
-u8 <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//检测是否存在 DS18B20</span>
-<span class="token keyword">void</span> <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//复位 DS18B20 </span>
-<span class="token macro property">#<span class="token directive keyword">endif</span> </span>
-<span class="token macro property">#<span class="token directive keyword">endif</span></span>
-​````c
-​````main<span class="token punctuation">.</span>c
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-u8 t<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token keyword">short</span> temperature<span class="token punctuation">;</span> 
-<span class="token function">delay_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//延时函数初始化 </span>
-<span class="token function">uart_init</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//串口初始化为 9600</span>
-<span class="token function">LED_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//初始化与 LED 连接的硬件接口</span>
-<span class="token function">LCD_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-POINT_COLOR<span class="token operator">=</span>RED<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置字体为红色</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"Mini STM32"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 TEST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"ATOM@ALIENTEK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"2014/3/12"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//DS18B20 初始化</span>
-<span class="token punctuation">{</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">LCD_Fill</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">239</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">,</span>WHITE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> 
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 OK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-POINT_COLOR<span class="token operator">=</span>BLUE<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置字体为蓝色</span>
-<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"Temp: . C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span> 
-<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">%</span><span class="token number">10</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//每 100ms 读取一次</span>
-<span class="token punctuation">{</span> 
-temperature<span class="token operator">=</span><span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>temperature<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-<span class="token function">LCD_ShowChar</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token string">'-'</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示负号</span>
-temperature<span class="token operator">=</span><span class="token operator">-</span>temperature<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//转为正数</span>
-<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token function">LCD_ShowChar</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//去掉负号</span>
-<span class="token function">LCD_ShowNum</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span>temperature<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示正数部分 </span>
- <span class="token function">LCD_ShowNum</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token operator">+</span><span class="token number">32</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span>temperature<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示小数部分</span>
-
-<span class="token punctuation">}</span> 
-<span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> t<span class="token operator">++</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">==</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>t<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>LED0<span class="token operator">=</span><span class="token operator">!</span>LED0<span class="token punctuation">;</span><span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="下载验证"><a href="#下载验证" class="headerlink" title="下载验证"></a>下载验证</h3><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>硬件</category>
-      </categories>
-      <tags>
-        <tag>-硬件 -stm32</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML2</title>
     <url>/posts/15573.html</url>
     <content><![CDATA[<blockquote>
@@ -797,93 +571,206 @@ temperature<span class="token operator">=</span><span class="token operator">-</
       </tags>
   </entry>
   <entry>
-    <title>asp.net发送邮件</title>
-    <url>/posts/61260.html</url>
-    <content><![CDATA[<h3 id="1-设置qq邮箱smtp服务"><a href="#1-设置qq邮箱smtp服务" class="headerlink" title="1.设置qq邮箱smtp服务"></a>1.设置qq邮箱smtp服务</h3><p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.1/blog01/01.png" alt="在这里插入图片描述"></p>
+    <title>DS18B20温度传感器实验</title>
+    <url>/posts/41913.html</url>
+    <content><![CDATA[<p>﻿@[toc]</p>
+<h3 id="DS18B20-简介"><a href="#DS18B20-简介" class="headerlink" title="DS18B20 简介"></a>DS18B20 简介</h3><p>DS18B20 是由 DALLAS 半导体公司推出的一种的“一线总线”接口的温度传感器。与传<br>统的热敏电阻等测温元件相比，它是一种新型的体积小、适用电压宽、与微处理器接口简单的<br>数字化温度传感器。一线总线结构具有简洁且经济的特点，可使用户轻松地组建传感器网络，<br>从而为测量系统的构建引入全新概念，测量温度范围为-55<del>+125℃ ，精度为±0.5℃。现场温<br>度直接以“一线总线”的数字方式传输，大大提高了系统的抗干扰性。它能直接读出被测温度，<br>并且可根据实际要求通过简单的编程实现 9</del>l2 位的数字值读数方式。它工作在 3~5.5 V 的电压<br>范围，采用多种封装形式，从而使系统设计灵活、方便，设定分辨率及用户设定的报警温度存<br>储在 EEPROM 中，掉电后依然保存。</p>
+<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://i.loli.net/2020/07/18/zGNmbeJ2SXWtIkn.png" alt="在这里插入图片描述"></p>
 <a id="more"></a>
 
-<h3 id="2-发送邮件代码"><a href="#2-发送邮件代码" class="headerlink" title="2.发送邮件代码"></a>2.发送邮件代码</h3><pre class=" language-c#"><code class="language-c#">using System;
-using System.Configuration;
-using System.Net;
-using System.Net.Mail;
+<h3 id="硬件设计"><a href="#硬件设计" class="headerlink" title="硬件设计"></a>硬件设计</h3><p>由于开发板上标准配置是没有 DS18B20 这个传感器的，只有接口，所以要做本章的实验，<br>大家必须找一个 DS18B20 插在预留的 18B20 接口上。<br>本章实验功能简介：开机的时候先检测是否有 DS18B20 存在，如果没有，则提示错误。<br>只有在检测到 DS18B20 之后才开始读取温度并显示在 LCD 上，如果发现了 DS18B20，则程<br>序每隔 100ms 左右读取一次数据，并把温度显示在 LCD 上。同样我们也是用 DS0 来指示程序<br>正在运行。<br>所要用到的硬件资源如下：<br>1） 指示灯 DS0<br>2） TFTLCD 模块<br>3） DS18B20 温度传感器<br><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://i.loli.net/2020/07/18/dgj5BpI7GvFWVCy.png" alt="在这里插入图片描述"></p>
+<h3 id="软件设计"><a href="#软件设计" class="headerlink" title="软件设计"></a>软件设计</h3><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"ds18b20.h"</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"delay.h"</span></span>
+<span class="token comment" spellcheck="true">//复位 DS18B20</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span> 
+<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 OUTPUT</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//拉低 DQ</span>
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">750</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//拉低 750us</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//DQ=1 </span>
+<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//15US</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//等待 DS18B20 的回应</span>
+<span class="token comment" spellcheck="true">//返回 1:未检测到 DS18B20 的存在</span>
+<span class="token comment" spellcheck="true">//返回 0:存在</span>
+u8 <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span> 
+u8 retry<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token function">DS18B20_IO_IN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//SET PA0 INPUT</span>
+ <span class="token keyword">while</span> <span class="token punctuation">(</span>DS18B20_DQ_IN<span class="token operator">&amp;&amp;</span>retry<span class="token operator">&lt;</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> retry<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>retry<span class="token operator">>=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">else</span> retry<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+ <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>DS18B20_DQ_IN<span class="token operator">&amp;&amp;</span>retry<span class="token operator">&lt;</span><span class="token number">240</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> retry<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>retry<span class="token operator">>=</span><span class="token number">240</span><span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ALIENTEK MiniSTM32 V3<span class="token number">.0</span> 开发板教程
+<span class="token number">381</span>
+STM32 不完全手册（库函数版）
+<span class="token comment" spellcheck="true">//从 DS18B20 读取一个位</span>
+<span class="token comment" spellcheck="true">//返回值：1/0</span>
+u8 <span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+ u8 data<span class="token punctuation">;</span>
+<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 OUTPUT</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token function">DS18B20_IO_IN</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//SET PA0 INPUT</span>
+<span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>DS18B20_DQ_IN<span class="token punctuation">)</span>data<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+ <span class="token keyword">else</span> data<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token keyword">return</span> data<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//从 DS18B20 读取一个字节</span>
+<span class="token comment" spellcheck="true">//返回值：读到的数据</span>
+u8 <span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span> 
+ u8 i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>dat<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+ j<span class="token operator">=</span><span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ dat<span class="token operator">=</span><span class="token punctuation">(</span>j<span class="token operator">&lt;&lt;</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token operator">|</span><span class="token punctuation">(</span>dat<span class="token operator">>></span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span> 
+ <span class="token keyword">return</span> dat<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//写一个字节到 DS18B20</span>
+<span class="token comment" spellcheck="true">//dat：要写入的字节</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span>u8 dat<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span> 
+ u8 j<span class="token punctuation">;</span> u8 testb<span class="token punctuation">;</span>
+<span class="token function">DS18B20_IO_OUT</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//SET PA0 OUTPUT;</span>
+ <span class="token keyword">for</span> <span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+ testb<span class="token operator">=</span>dat<span class="token operator">&amp;</span><span class="token number">0x01</span><span class="token punctuation">;</span>
+ dat<span class="token operator">=</span>dat<span class="token operator">>></span><span class="token number">1</span><span class="token punctuation">;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span>testb<span class="token punctuation">)</span> 
+ <span class="token punctuation">{</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Write 1</span>
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+ALIENTEK MiniSTM32 V3<span class="token number">.0</span> 开发板教程
+<span class="token number">382</span>
+STM32 不完全手册（库函数版）
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token punctuation">}</span>
+ <span class="token keyword">else</span> 
+ <span class="token punctuation">{</span>
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// Write 0</span>
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ DS18B20_DQ_OUT<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+ <span class="token function">delay_us</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//开始温度转换</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Start</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">// ds1820 start convert</span>
+<span class="token punctuation">{</span> 
+ <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xcc</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// skip rom</span>
+ <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0x44</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// convert</span>
+<span class="token punctuation">}</span> 
+<span class="token comment" spellcheck="true">//初始化 DS18B20 的 IO 口 DQ 同时检测 DS 的存在</span>
+<span class="token comment" spellcheck="true">//返回 1:不存在</span>
+<span class="token comment" spellcheck="true">//返回 0:存在 </span>
+u8 <span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+GPIO_InitTypeDef GPIO_InitStructure<span class="token punctuation">;</span>
+<span class="token function">RCC_APB2PeriphClockCmd</span><span class="token punctuation">(</span>RCC_APB2Periph_GPIOA<span class="token punctuation">,</span> ENABLE<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//使能 PORTA 时钟</span>
+GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Pin <span class="token operator">=</span> GPIO_Pin_0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//PORTA0 推挽输出</span>
+GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Mode <span class="token operator">=</span> GPIO_Mode_Out_PP<span class="token punctuation">;</span> 
+GPIO_InitStructure<span class="token punctuation">.</span>GPIO_Speed <span class="token operator">=</span> GPIO_Speed_50MHz<span class="token punctuation">;</span>
+<span class="token function">GPIO_Init</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span> <span class="token operator">&amp;</span>GPIO_InitStructure<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">GPIO_SetBits</span><span class="token punctuation">(</span>GPIOA<span class="token punctuation">,</span>GPIO_Pin_0<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出 1</span>
+<span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//从 ds18b20 得到温度值</span>
+<span class="token comment" spellcheck="true">//精度：0.1C</span>
+<span class="token comment" spellcheck="true">//返回值：温度值 （-550~1250）</span>
+<span class="token keyword">short</span> <span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+ u8 temp<span class="token punctuation">;</span> u8 TL<span class="token punctuation">,</span>TH<span class="token punctuation">;</span>
+<span class="token keyword">short</span> tem<span class="token punctuation">;</span>
+ <span class="token function">DS18B20_Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ds1820 start convert</span>
+ <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xcc</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// skip rom</span>
+ <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span><span class="token number">0xbe</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// convert </span>
+ TL<span class="token operator">=</span><span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// LSB </span>
+ TH<span class="token operator">=</span><span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// MSB </span>
+ <span class="token keyword">if</span><span class="token punctuation">(</span>TH<span class="token operator">></span><span class="token number">7</span><span class="token punctuation">)</span>
+ <span class="token punctuation">{</span>
+ TH<span class="token operator">=</span><span class="token operator">~</span>TH<span class="token punctuation">;</span> TL<span class="token operator">=</span><span class="token operator">~</span>TL<span class="token punctuation">;</span>
+ temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//温度为负 </span>
+ <span class="token punctuation">}</span><span class="token keyword">else</span> temp<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//温度为正 </span>
+ tem<span class="token operator">=</span>TH<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获得高八位</span>
+ tem<span class="token operator">&lt;&lt;=</span><span class="token number">8</span><span class="token punctuation">;</span> 
+ tem<span class="token operator">+</span><span class="token operator">=</span>TL<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获得底八位</span>
+ tem<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>tem<span class="token operator">*</span><span class="token number">0.625</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换 </span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token keyword">return</span> tem<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回温度值</span>
+<span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token operator">-</span>tem<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">ifndef</span> __DS18B20_H</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __DS18B20_H </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"sys.h"</span> </span>
+<span class="token comment" spellcheck="true">//IO 方向设置</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_IO_IN() {GPIOA->CRL&amp;=0XFFFFFFF0;GPIOA->CRL|=8&lt;&lt;0;}</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_IO_OUT() {GPIOA->CRL&amp;=0XFFFFFFF0;GPIOA->CRL|=3&lt;&lt;0;}</span>
+<span class="token comment" spellcheck="true">////IO 操作函数 </span>
+<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_DQ_OUT PAout(0) </span><span class="token comment" spellcheck="true">//数据端口 PA0</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> DS18B20_DQ_IN PAin(0) </span><span class="token comment" spellcheck="true">//数据端口 PA0 </span>
+u8 <span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//初始化 DS18B20</span>
+<span class="token keyword">short</span> <span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取温度</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Start</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//开始温度转换</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Write_Byte</span><span class="token punctuation">(</span>u8 dat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//写入一个字节</span>
+u8 <span class="token function">DS18B20_Read_Byte</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读出一个字节</span>
+u8 <span class="token function">DS18B20_Read_Bit</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//读出一个位</span>
+u8 <span class="token function">DS18B20_Check</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//检测是否存在 DS18B20</span>
+<span class="token keyword">void</span> <span class="token function">DS18B20_Rst</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//复位 DS18B20 </span>
+<span class="token macro property">#<span class="token directive keyword">endif</span> </span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+​````c
+​````main<span class="token punctuation">.</span>c
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+u8 t<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token keyword">short</span> temperature<span class="token punctuation">;</span> 
+<span class="token function">delay_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//延时函数初始化 </span>
+<span class="token function">uart_init</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//串口初始化为 9600</span>
+<span class="token function">LED_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//初始化与 LED 连接的硬件接口</span>
+<span class="token function">LCD_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+POINT_COLOR<span class="token operator">=</span>RED<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//设置字体为红色</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"Mini STM32"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 TEST"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"ATOM@ALIENTEK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"2014/3/12"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">DS18B20_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//DS18B20 初始化</span>
+<span class="token punctuation">{</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">LCD_Fill</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">239</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">,</span>WHITE<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">130</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"DS18B20 OK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+POINT_COLOR<span class="token operator">=</span>BLUE<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置字体为蓝色</span>
+<span class="token function">LCD_ShowString</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token string">"Temp: . C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> 
+<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">%</span><span class="token number">10</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//每 100ms 读取一次</span>
+<span class="token punctuation">{</span> 
+temperature<span class="token operator">=</span><span class="token function">DS18B20_Get_Temp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>temperature<span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token function">LCD_ShowChar</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token string">'-'</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示负号</span>
+temperature<span class="token operator">=</span><span class="token operator">-</span>temperature<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//转为正数</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token function">LCD_ShowChar</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//去掉负号</span>
+<span class="token function">LCD_ShowNum</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span>temperature<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示正数部分 </span>
+ <span class="token function">LCD_ShowNum</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token operator">+</span><span class="token number">40</span><span class="token operator">+</span><span class="token number">32</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">,</span>temperature<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示小数部分</span>
 
-public class EmailSender
-{
-    //从Web.config中的<appSettings>配置节获取相应的键值
-    private string mailFromAddress = ConfigurationManager.AppSettings["MailFromAddress"];
-    private bool useSsl = bool.Parse(ConfigurationManager.AppSettings["UseSsl"]);
-    private string userName = ConfigurationManager.AppSettings["UserName"];
-    private string password = ConfigurationManager.AppSettings["Password"];
-    private string serverName = ConfigurationManager.AppSettings["ServerName"];
-    private int serverPort = int.Parse(ConfigurationManager.AppSettings["ServerPort"]);
-
-    /// <summary>
-    /// 自定义方法，根据设置的SMTP服务器名、端口号、账户名、授权码等信息发送给定发件人邮箱、收件人邮箱、电子邮件主题、电子邮件内容等信息的邮件
-    /// </summary>
-    public void PsdSend(string mailToAddress, string newPwd)
-    {
-        //新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象
-        using (var smtpClient = new SmtpClient())
-        {
-            //设置是否使用SSL协议连接
-            smtpClient.EnableSsl = useSsl;
-            //设置SMTP服务器名
-            smtpClient.Host = serverName;
-            //设置SMTP服务器的端口号
-            smtpClient.Port = serverPort;
-            //设置SMTP服务器发送邮件的凭据（用户名和授权码)
-            smtpClient.Credentials = new NetworkCredential(userName, password);
-            string body = "您登录的密码已重置为：" + newPwd;
-            MailMessage mailMessage = new MailMessage(
-                                   mailFromAddress,   // 发件人邮箱
-                                   mailToAddress,     // 收件人邮箱
-                                   "用户密码重置",  // 电子邮件主题
-                                   body);  // 电子邮件内容
-                                           //调用smtpClient对象的Send()方法发送邮件
-            smtpClient.Send(mailMessage);
-        }
-    }
-
-    //验证码发送
-    public string VerificationCodeSend(string mailToAddress)
-    {
-        //伪随机生成6位数字验证码
-        Random rand = new Random();
-        string code = rand.Next(100000, 999999).ToString();
-
-        //新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象
-        using (var smtpClient = new SmtpClient())
-        {
-            //设置是否使用SSL协议连接
-            smtpClient.EnableSsl = useSsl;
-            //设置SMTP服务器名
-            smtpClient.Host = serverName;
-            //设置SMTP服务器的端口号
-            smtpClient.Port = serverPort;
-            //设置SMTP服务器发送邮件的凭据（用户名和授权码)
-            smtpClient.Credentials = new NetworkCredential(userName, password);
-            string body = "你的验证码为：" + code+" ，用于进行密码重置验证，请勿转发！";
-            MailMessage mailMessage = new MailMessage(
-                                   mailFromAddress,   // 发件人邮箱
-                                   mailToAddress,     // 收件人邮箱
-                                   "BookShop验证码",  // 电子邮件主题
-                                   body);  // 电子邮件内容
-            //调用smtpClient对象的Send()方法发送邮件
-            smtpClient.Send(mailMessage);
-        }
-        return code;
-    }
-
-}</code></pre>
-<h3 id="3设置web-config"><a href="#3设置web-config" class="headerlink" title="3设置web.config"></a>3设置web.config</h3><pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MailFromAddress<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>qq号@qq.com<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UseSsl<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>随意<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>验证码(从设置smtp中获得)<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ServerName<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>smtp.qq.com<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ServerPort<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>587<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
-<p>输入邮箱获取修改后的密码。</p>
-<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.1/blog01/02.png" alt="在这里插入图片描述"></p>
-<script>
+<span class="token punctuation">}</span> 
+<span class="token function">delay_ms</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> t<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">==</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>t<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>LED0<span class="token operator">=</span><span class="token operator">!</span>LED0<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="下载验证"><a href="#下载验证" class="headerlink" title="下载验证"></a>下载验证</h3><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -903,10 +790,10 @@ public class EmailSender
           });
       </script>]]></content>
       <categories>
-        <category>前端</category>
+        <category>硬件</category>
       </categories>
       <tags>
-        <tag>-前端 -asp.net</tag>
+        <tag>-硬件 -stm32</tag>
       </tags>
   </entry>
   <entry>
@@ -1119,6 +1006,119 @@ public class EmailSender
       </categories>
       <tags>
         <tag>-网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>asp.net发送邮件</title>
+    <url>/posts/61260.html</url>
+    <content><![CDATA[<h3 id="1-设置qq邮箱smtp服务"><a href="#1-设置qq邮箱smtp服务" class="headerlink" title="1.设置qq邮箱smtp服务"></a>1.设置qq邮箱smtp服务</h3><p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.1/blog01/01.png" alt="在这里插入图片描述"></p>
+<a id="more"></a>
+
+<h3 id="2-发送邮件代码"><a href="#2-发送邮件代码" class="headerlink" title="2.发送邮件代码"></a>2.发送邮件代码</h3><pre class=" language-c#"><code class="language-c#">using System;
+using System.Configuration;
+using System.Net;
+using System.Net.Mail;
+
+public class EmailSender
+{
+    //从Web.config中的<appSettings>配置节获取相应的键值
+    private string mailFromAddress = ConfigurationManager.AppSettings["MailFromAddress"];
+    private bool useSsl = bool.Parse(ConfigurationManager.AppSettings["UseSsl"]);
+    private string userName = ConfigurationManager.AppSettings["UserName"];
+    private string password = ConfigurationManager.AppSettings["Password"];
+    private string serverName = ConfigurationManager.AppSettings["ServerName"];
+    private int serverPort = int.Parse(ConfigurationManager.AppSettings["ServerPort"]);
+
+    /// <summary>
+    /// 自定义方法，根据设置的SMTP服务器名、端口号、账户名、授权码等信息发送给定发件人邮箱、收件人邮箱、电子邮件主题、电子邮件内容等信息的邮件
+    /// </summary>
+    public void PsdSend(string mailToAddress, string newPwd)
+    {
+        //新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象
+        using (var smtpClient = new SmtpClient())
+        {
+            //设置是否使用SSL协议连接
+            smtpClient.EnableSsl = useSsl;
+            //设置SMTP服务器名
+            smtpClient.Host = serverName;
+            //设置SMTP服务器的端口号
+            smtpClient.Port = serverPort;
+            //设置SMTP服务器发送邮件的凭据（用户名和授权码)
+            smtpClient.Credentials = new NetworkCredential(userName, password);
+            string body = "您登录的密码已重置为：" + newPwd;
+            MailMessage mailMessage = new MailMessage(
+                                   mailFromAddress,   // 发件人邮箱
+                                   mailToAddress,     // 收件人邮箱
+                                   "用户密码重置",  // 电子邮件主题
+                                   body);  // 电子邮件内容
+                                           //调用smtpClient对象的Send()方法发送邮件
+            smtpClient.Send(mailMessage);
+        }
+    }
+
+    //验证码发送
+    public string VerificationCodeSend(string mailToAddress)
+    {
+        //伪随机生成6位数字验证码
+        Random rand = new Random();
+        string code = rand.Next(100000, 999999).ToString();
+
+        //新建SmtpClient类实例smtpClient对象，using语句块结束时释放smtpClient对象
+        using (var smtpClient = new SmtpClient())
+        {
+            //设置是否使用SSL协议连接
+            smtpClient.EnableSsl = useSsl;
+            //设置SMTP服务器名
+            smtpClient.Host = serverName;
+            //设置SMTP服务器的端口号
+            smtpClient.Port = serverPort;
+            //设置SMTP服务器发送邮件的凭据（用户名和授权码)
+            smtpClient.Credentials = new NetworkCredential(userName, password);
+            string body = "你的验证码为：" + code+" ，用于进行密码重置验证，请勿转发！";
+            MailMessage mailMessage = new MailMessage(
+                                   mailFromAddress,   // 发件人邮箱
+                                   mailToAddress,     // 收件人邮箱
+                                   "BookShop验证码",  // 电子邮件主题
+                                   body);  // 电子邮件内容
+            //调用smtpClient对象的Send()方法发送邮件
+            smtpClient.Send(mailMessage);
+        }
+        return code;
+    }
+
+}</code></pre>
+<h3 id="3设置web-config"><a href="#3设置web-config" class="headerlink" title="3设置web.config"></a>3设置web.config</h3><pre class=" language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MailFromAddress<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>qq号@qq.com<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UseSsl<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>随意<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>验证码(从设置smtp中获得)<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ServerName<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>smtp.qq.com<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>add</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ServerPort<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>587<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></code></pre>
+<p>输入邮箱获取修改后的密码。</p>
+<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.1/blog01/02.png" alt="在这里插入图片描述"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>-前端 -asp.net</tag>
       </tags>
   </entry>
   <entry>
