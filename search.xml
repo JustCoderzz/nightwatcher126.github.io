@@ -910,6 +910,48 @@ public class EmailSender
       </tags>
   </entry>
   <entry>
+    <title>stm32数字钟实验</title>
+    <url>/posts/302.html</url>
+    <content><![CDATA[<h2 id="题目及要求"><a href="#题目及要求" class="headerlink" title="题目及要求"></a>题目及要求</h2><p> 1.数字钟。<br>使用ARM Cotex M3 核MCU的定时器产生秒钟发生器。<br>把数字钟的秒钟和分钟显示出来。显示方式不限，数码管、LED点阵、串口、LCD等形式均可。</p>
+<blockquote>
+<p>（<strong>本次实验选用：ALIENTEK MiniSTM32 开发板</strong>）</p>
+</blockquote>
+<hr>
+<h2 id="硬件设计"><a href="#硬件设计" class="headerlink" title="硬件设计"></a>硬件设计</h2><p>本实验用到的硬件资源（ALIENTEK MiniSTM32 开发板有：<br>1） 指示灯 DS0<br>2） 串口<br>3） TFTLCD 模块<br>4） R：ALIENTEK MiniSTM32 开发板</p>
+<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://i.loli.net/2020/07/18/vA7aPKRLUTHMWtX.png" alt="在这里插入图片描述"></p>
+<hr>
+<h2 id="stm32时钟简介"><a href="#stm32时钟简介" class="headerlink" title="stm32时钟简介"></a>stm32时钟简介</h2><h3 id="1-RTC实时时钟"><a href="#1-RTC实时时钟" class="headerlink" title="(1)RTC实时时钟"></a>(1)RTC实时时钟</h3><p>STM32 的实时时钟（RTC）是一个独立的定时器。STM32 的 RTC 模块拥有一组连续计数 的计数器，在相应软件配置下，可提供时钟日历的功能。修改计数器的值可以重新设置系统当前的时间和日期。 RTC 模块和时钟配置系统(RCC_BDCR 寄存器)是在后备区域，即在系统复位或从待机模式<br>唤醒后 RTC 的设置和时间维持不变。但是在系统复位后，会自动禁止访问后备寄存器和 RTC，以防止对后备区域(BKP)的意外写操作。所以在要设置时间之前， 先要取消备份区域（BKP）写保护。 RTC 由两个主要部分组成，第一部分(APB1 接口)用来和 APB1 总线相连。<br>此单元还包含一组 16 位寄存器，可通过 APB1 总线对其进行读写操作。APB1 接口由 APB1 总线时钟驱动，用来与 APB1 总线连接。另一部分(RTC 核心)由一组可编程计数器组成，分成两个主要模块。第一个模块是 RTC 的预分频模块，它可编程产生 1 秒的 RTC 时间基准 TR_CLK。RTC 的预分频模块包含了一个 20位的可编程分频器(RTC 预分频器)。如果在 RTC_CR 寄存器中设置了相应的允许位，则在每个 TR_CLK 周期中 RTC 产生一个中断(秒中断)。第二个模块是一个 32 位的可编程计数器，可被<br>初始化为当前的系统时间，一个 32 位的时钟计数器，按秒钟计算，可以记录 4294967296 秒， 约合 136 年左右，作为一般应用，这已经是足够了的。<br><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.4/blog01/04.png" alt="在这里插入图片描述"></p>
+<hr>
+<h2 id="RTC的一般设置"><a href="#RTC的一般设置" class="headerlink" title="RTC的一般设置"></a>RTC的一般设置</h2><p>1）使能电源时钟和备份区域时钟。<br>要访问 RTC 和备份区域就必须先使能电源时钟和备份区域时钟。<br>RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);<br>2）取消备份区写保护。<br>要向备份区域写入数据，就要先取消备份区域写保护（写保护在每次硬复位之后被使能），<br>否则是无法向备份区域写入数据的。我们需要用到向备份区域写入一个字节，来标记时钟<br>配置过了，这样避免每次复位之后重新配置时钟。取消备份区域写保护的库函数实现方法是：<br>PWR_BackupAccessCmd(ENABLE)<br>3）复位备份区域，开启外部低速振荡器。<br>4）选择 RTC 时钟，并使能。<br>这里我们将通过 RCC_BDCR 的 RTCSEL 来选择外部 LSI 作为 RTC 的时钟。然后通过<br>RTCEN 位使能 RTC 时钟。<br>5）设置 RTC 的分频，以及配置 RTC 时钟。<br>在开启了 RTC 时钟之后，我们要做的就是设置 RTC 时钟的分频数，通过 RTC_PRLH 和<br>RTC_PRLL 来设置，然后等待 RTC 寄存器操作完成，并同步之后，设置秒钟中断。<br>6）更新配置，设置 RTC 中断分组。<br>在设置完时钟之后，我们将配置更新同时退出配置模式，这里还是通过 RTC_CRH 的 CNF<br>来实现。库函数的方法是：<br>RTC_ExitConfigMode();//退出配置模式，更新配置<br>7）编写中断服务函数。<br>最后，我们要编写中断服务函数，在秒钟中断产生的时候，读取当前的时间值，并显示到<br>TFTLCD 模块上。<br>8）Rtc相关函数<br>RTC时钟源和时钟操作函数：<br> void RCC_RTCCLKConfig(uint32_t  CLKSource)；//时钟源选择<br> void RCC_RTCCLKCmd(FunctionalState NewState)//时钟使能<br>RTC配置函数（预分频，计数值：<br>void RTC_SetPrescaler(uint32_t PrescalerValue);//预分频配置：PRLH/PRLL<br>void RTC_SetCounter(uint32_t CounterValue)；//设置计数器值：CNTH/CNTL<br>void RTC_SetAlarm(uint32_t AlarmValue)；//闹钟设置：ALRH/ALRL<br>RTC中断设置函数：<br> void RTC_ITConfig(uint16_t RTC_IT, FunctionalState NewState);//CRH<br>RTC允许配置和退出配置函数：<br>void RTC_EnterConfigMode(void);//允许RTC配置 :CRL位 CNF<br>void RTC_ExitConfigMode(void);//退出配置模式:CRL位 CNF<br>同步函数：<br>void RTC_WaitForLastTask(void)；//等待上次操作完成：CRL位RTOFF<br> void RTC_WaitForSynchro(void)；//等待时钟同步：CRL位RSF</p>
+<hr>
+<h2 id="作品展示"><a href="#作品展示" class="headerlink" title="作品展示"></a>作品展示</h2><p>源代码见我所上传的资源     <a href="https://download.csdn.net/download/qq_43587354/12612942" target="_blank" rel="noopener">源代码</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>硬件</category>
+      </categories>
+      <tags>
+        <tag>-stm32</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c#实现网络抓包及协议分析</title>
     <url>/posts/60657.html</url>
     <content><![CDATA[<p>@[toc]</p>
@@ -1122,21 +1164,11 @@ public class EmailSender
       </tags>
   </entry>
   <entry>
-    <title>stm32数字钟实验</title>
-    <url>/posts/302.html</url>
-    <content><![CDATA[<h2 id="题目及要求"><a href="#题目及要求" class="headerlink" title="题目及要求"></a>题目及要求</h2><p> 1.数字钟。<br>使用ARM Cotex M3 核MCU的定时器产生秒钟发生器。<br>把数字钟的秒钟和分钟显示出来。显示方式不限，数码管、LED点阵、串口、LCD等形式均可。</p>
-<blockquote>
-<p>（<strong>本次实验选用：ALIENTEK MiniSTM32 开发板</strong>）</p>
-</blockquote>
-<hr>
-<h2 id="硬件设计"><a href="#硬件设计" class="headerlink" title="硬件设计"></a>硬件设计</h2><p>本实验用到的硬件资源（ALIENTEK MiniSTM32 开发板有：<br>1） 指示灯 DS0<br>2） 串口<br>3） TFTLCD 模块<br>4） R：ALIENTEK MiniSTM32 开发板</p>
-<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://i.loli.net/2020/07/18/vA7aPKRLUTHMWtX.png" alt="在这里插入图片描述"></p>
-<hr>
-<h2 id="stm32时钟简介"><a href="#stm32时钟简介" class="headerlink" title="stm32时钟简介"></a>stm32时钟简介</h2><h3 id="1-RTC实时时钟"><a href="#1-RTC实时时钟" class="headerlink" title="(1)RTC实时时钟"></a>(1)RTC实时时钟</h3><p>STM32 的实时时钟（RTC）是一个独立的定时器。STM32 的 RTC 模块拥有一组连续计数 的计数器，在相应软件配置下，可提供时钟日历的功能。修改计数器的值可以重新设置系统当前的时间和日期。 RTC 模块和时钟配置系统(RCC_BDCR 寄存器)是在后备区域，即在系统复位或从待机模式<br>唤醒后 RTC 的设置和时间维持不变。但是在系统复位后，会自动禁止访问后备寄存器和 RTC，以防止对后备区域(BKP)的意外写操作。所以在要设置时间之前， 先要取消备份区域（BKP）写保护。 RTC 由两个主要部分组成，第一部分(APB1 接口)用来和 APB1 总线相连。<br>此单元还包含一组 16 位寄存器，可通过 APB1 总线对其进行读写操作。APB1 接口由 APB1 总线时钟驱动，用来与 APB1 总线连接。另一部分(RTC 核心)由一组可编程计数器组成，分成两个主要模块。第一个模块是 RTC 的预分频模块，它可编程产生 1 秒的 RTC 时间基准 TR_CLK。RTC 的预分频模块包含了一个 20位的可编程分频器(RTC 预分频器)。如果在 RTC_CR 寄存器中设置了相应的允许位，则在每个 TR_CLK 周期中 RTC 产生一个中断(秒中断)。第二个模块是一个 32 位的可编程计数器，可被<br>初始化为当前的系统时间，一个 32 位的时钟计数器，按秒钟计算，可以记录 4294967296 秒， 约合 136 年左右，作为一般应用，这已经是足够了的。<br><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.4/blog01/04.png" alt="在这里插入图片描述"></p>
-<hr>
-<h2 id="RTC的一般设置"><a href="#RTC的一般设置" class="headerlink" title="RTC的一般设置"></a>RTC的一般设置</h2><p>1）使能电源时钟和备份区域时钟。<br>要访问 RTC 和备份区域就必须先使能电源时钟和备份区域时钟。<br>RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);<br>2）取消备份区写保护。<br>要向备份区域写入数据，就要先取消备份区域写保护（写保护在每次硬复位之后被使能），<br>否则是无法向备份区域写入数据的。我们需要用到向备份区域写入一个字节，来标记时钟<br>配置过了，这样避免每次复位之后重新配置时钟。取消备份区域写保护的库函数实现方法是：<br>PWR_BackupAccessCmd(ENABLE)<br>3）复位备份区域，开启外部低速振荡器。<br>4）选择 RTC 时钟，并使能。<br>这里我们将通过 RCC_BDCR 的 RTCSEL 来选择外部 LSI 作为 RTC 的时钟。然后通过<br>RTCEN 位使能 RTC 时钟。<br>5）设置 RTC 的分频，以及配置 RTC 时钟。<br>在开启了 RTC 时钟之后，我们要做的就是设置 RTC 时钟的分频数，通过 RTC_PRLH 和<br>RTC_PRLL 来设置，然后等待 RTC 寄存器操作完成，并同步之后，设置秒钟中断。<br>6）更新配置，设置 RTC 中断分组。<br>在设置完时钟之后，我们将配置更新同时退出配置模式，这里还是通过 RTC_CRH 的 CNF<br>来实现。库函数的方法是：<br>RTC_ExitConfigMode();//退出配置模式，更新配置<br>7）编写中断服务函数。<br>最后，我们要编写中断服务函数，在秒钟中断产生的时候，读取当前的时间值，并显示到<br>TFTLCD 模块上。<br>8）Rtc相关函数<br>RTC时钟源和时钟操作函数：<br> void RCC_RTCCLKConfig(uint32_t  CLKSource)；//时钟源选择<br> void RCC_RTCCLKCmd(FunctionalState NewState)//时钟使能<br>RTC配置函数（预分频，计数值：<br>void RTC_SetPrescaler(uint32_t PrescalerValue);//预分频配置：PRLH/PRLL<br>void RTC_SetCounter(uint32_t CounterValue)；//设置计数器值：CNTH/CNTL<br>void RTC_SetAlarm(uint32_t AlarmValue)；//闹钟设置：ALRH/ALRL<br>RTC中断设置函数：<br> void RTC_ITConfig(uint16_t RTC_IT, FunctionalState NewState);//CRH<br>RTC允许配置和退出配置函数：<br>void RTC_EnterConfigMode(void);//允许RTC配置 :CRL位 CNF<br>void RTC_ExitConfigMode(void);//退出配置模式:CRL位 CNF<br>同步函数：<br>void RTC_WaitForLastTask(void)；//等待上次操作完成：CRL位RTOFF<br> void RTC_WaitForSynchro(void)；//等待时钟同步：CRL位RSF</p>
-<hr>
-<h2 id="作品展示"><a href="#作品展示" class="headerlink" title="作品展示"></a>作品展示</h2><p>源代码见我所上传的资源     <a href="https://download.csdn.net/download/qq_43587354/12612942" target="_blank" rel="noopener">源代码</a></p>
+    <title>‘前端学习路线’</title>
+    <url>/posts/63618.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>热爱前端，认真学习，认真生活。:<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f619.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f619.png?v8">😙</span></p>
+<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.5/blog01/05.jpg" alt="roadmap-完整路线"></p>
+<p><a href="https://objtube.github.io/front-end-roadmap/#/" target="_blank" rel="noopener" 超链接title""="">路线链接</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1157,10 +1189,10 @@ public class EmailSender
           });
       </script>]]></content>
       <categories>
-        <category>硬件</category>
+        <category>uncategorized</category>
       </categories>
       <tags>
-        <tag>-stm32</tag>
+        <tag>-前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1485,38 +1517,6 @@ public class EmailSender
       </categories>
       <tags>
         <tag>-前端 -html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>‘前端学习路线’</title>
-    <url>/posts/63618.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>热爱前端，认真学习，认真生活。:<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f619.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f619.png?v8">😙</span></p>
-<p><img src= "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595312818166&di=14c70461c282f496a6c243b90cbcc596&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1595312818166&amp;di=14c70461c282f496a6c243b90cbcc596&amp;imgtype=0&amp;src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc67bcdfe10d5201067157ff7376414c6a9f9900437c69-EndxN7_fw658" data-original="https://cdn.jsdelivr.net/gh/nightwatcher126/CDN@1.5/blog01/05.jpg" alt="roadmap-完整路线"></p>
-<p><a href="https://objtube.github.io/front-end-roadmap/#/" target="_blank" rel="noopener" 超链接title""="">路线链接</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>uncategorized</category>
-      </categories>
-      <tags>
-        <tag>-前端</tag>
       </tags>
   </entry>
   <entry>
